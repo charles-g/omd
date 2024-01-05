@@ -1,8 +1,10 @@
 import { PrismaClient, Prisma } from "@prisma/client";
-import {SearchResultsMapper} from "./mapper";
-import { CompanyInfoDocument, SearchResult } from "../domain/dto/company-search-result";
+import {SearchResultsMapper} from "../mapper";
+import { CompanyInfoDocument, SearchResult } from "../../domain/dto/company-search-result";
+import { ICompanyFinder } from "../../domain/ports/company-finder.interface";
+import { IDocumentRepository } from "../../domain/ports/document-repository.interface";
 
-export class DataAccessObject {
+export class DataAccessObject implements IDocumentRepository, ICompanyFinder {
 
   private prisma = new PrismaClient();
   private mapper = new SearchResultsMapper();

@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { ICompanyFinder } from "./company-finder.interface";
+import { ICompanyFinder } from "./ports/company-finder.interface";
 
 @Injectable()
 export class GetRelevantCompanies {

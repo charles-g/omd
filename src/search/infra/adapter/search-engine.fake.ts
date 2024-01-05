@@ -1,4 +1,4 @@
-import { ISearchEngine } from "../domain/search-engine.interface";
+import { ISearchEngine } from "../../domain/ports/search-engine.interface";
 import * as fs from "fs";
 
 export class SearchEngineFake implements ISearchEngine {

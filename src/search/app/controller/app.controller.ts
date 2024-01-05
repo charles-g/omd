@@ -1,6 +1,6 @@
 import { ClassSerializerInterceptor, Controller, Get, Query, Res, UseInterceptors } from "@nestjs/common";
 import { GetRelevantCompanies } from '../../domain/get-revelant-companies.use-case';
-import { DataAccessObject } from "../../infra/data-access-object";
+import { DataAccessObject } from "../../infra/adapter/data-access-object";
 
 @Controller()
 export class AppController {
